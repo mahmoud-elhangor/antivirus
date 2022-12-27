@@ -1,22 +1,30 @@
-import 'package:fire_antivirus/widgets/loading/items.loading.dart';
+
 import 'package:flutter/material.dart';
 
+import '../../widgets/loading/items.loading.dart';
+
 class LoadingFirePage extends StatefulWidget {
-  LoadingFireState createState() => new LoadingFireState();
+  static const String routeName="loading";
+
+  const LoadingFirePage({super.key});
+
+  @override
+  LoadingFireState createState() => LoadingFireState();
 }
 
 class LoadingFireState extends State<LoadingFirePage> {
+  @override
   Widget build(context) {
     // routing
-    this.toHome(context);
+    toHome(context);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            backgroundColor: Colors.grey[900], body: Center(child: Items())));
+            backgroundColor: Colors.grey[900], body: const Center(child: Items())));
   }
 
   void toHome(context) {
-    Future delays = Future.delayed(Duration(seconds: 3), () {
+    Future delays = Future.delayed(const Duration(seconds: 3), () {
       return true;
     });
 

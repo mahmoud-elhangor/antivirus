@@ -1,12 +1,16 @@
-import 'package:fire_antivirus/pages/home/home.page.dart';
-import 'package:fire_antivirus/pages/loading/loading.page.dart';
+
 import 'package:flutter/material.dart';
 
+import 'pages/home/home.page.dart';
+import 'pages/loading/loading.page.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,8 +18,8 @@ class MyApp extends StatelessWidget {
         title: 'Fire virus',
         initialRoute: "loading",
         routes: {
-          "loading": (context) => LoadingFirePage(),
-          "home": (context) => HomeFirePage(),
+          "loading": (context) => const LoadingFirePage (),
+          "home": (context) => const HomeFirePage(),
         });
   }
 }

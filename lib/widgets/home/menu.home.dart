@@ -3,22 +3,25 @@ import 'package:flutter/material.dart';
 import 'item.menu.dart';
 
 class MenuHome extends StatefulWidget {
+  @override
   MenuHomeState createState() => MenuHomeState();
 }
 
 class MenuHomeState extends State<MenuHome> {
+  @override
   Widget build(context) {
     return Container(
         width: 79,
-        decoration: this.decorate(),
+        decoration: decorate(),
         child: ListView(
-          physics: ScrollPhysics(),
-          children: this.insertItems(),
+          shrinkWrap: true,
+          physics: const ScrollPhysics(),
+          children: insertItems (),
         ));
   }
 
   BoxDecoration decorate() {
-    return BoxDecoration(
+    return const BoxDecoration(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(5), bottomRight: Radius.circular(5)),
         color: Color.fromRGBO(20, 20, 20, .7));

@@ -1,18 +1,22 @@
-import 'package:fire_antivirus/helpers/logo.app.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../helpers/logo.app.dart';
 
 AppBar navBar() {
   return AppBar(
+
+    actions: [Icon(Icons.local_fire_department_rounded,)],
     centerTitle: true,
-    toolbarHeight: 55,
+    toolbarHeight: 80,
     leading: logoApp(0, 50),
-    toolbarOpacity: .6,
-    backgroundColor: Color.fromRGBO(20, 25, 25, 1),
-    title: Text("Fire Antivirus",
+    toolbarOpacity: .3,
+    backgroundColor: const Color.fromRGBO(20, 25, 25, 1),
+    title: const Text("Fire Antivirus",
         style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w400,
+            color: Colors.deepOrange,
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
             fontFamily: "ubuntu")),
     // elevation: 2,
   );

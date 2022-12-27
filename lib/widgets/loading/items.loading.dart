@@ -1,12 +1,14 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:fire_antivirus/helpers/logo.app.dart';
 import 'package:flutter/material.dart';
-
+import '../../helpers/logo.app.dart';
+import 'package:flutter_animator/flutter_animator.dart';
 class Items extends StatelessWidget {
+  const Items({super.key});
+
+  @override
   Widget build(context) {
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [logoApp(40, 120), this.loadingCircular()]);
+        children: [logoApp(40, 120), loadingCircular()]);
   }
 
   Widget loadingCircular() {
