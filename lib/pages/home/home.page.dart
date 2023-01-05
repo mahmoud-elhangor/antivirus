@@ -28,8 +28,8 @@ class HomeFireState extends State<HomeFirePage> {
 
   Row itemsHome() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+     // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // menu
         Safe(MenuHome()),

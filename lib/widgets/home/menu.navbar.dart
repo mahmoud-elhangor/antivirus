@@ -5,19 +5,17 @@ import '../../helpers/logo.app.dart';
 
 AppBar navBar() {
   return AppBar(
-
-    actions: [Icon(Icons.local_fire_department_rounded,)],
     centerTitle: true,
     toolbarHeight: 80,
-    leading: logoApp(0, 50),
-    toolbarOpacity: .3,
+    leading:logoApp(0, 40) ,
     backgroundColor: const Color.fromRGBO(20, 25, 25, 1),
     title: const Text("Fire Antivirus",
         style: TextStyle(
-            color: Colors.deepOrange,
+            color: Colors.white,
             fontSize: 22,
             fontWeight: FontWeight.w600,
-            fontFamily: "ubuntu")),
+            fontFamily: "ubuntu")
+    ),
     // elevation: 2,
   );
 }

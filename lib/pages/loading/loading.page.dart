@@ -20,11 +20,12 @@ class LoadingFireState extends State<LoadingFirePage> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            backgroundColor: Colors.grey[900], body: const Center(child: Items())));
+            backgroundColor: Colors.grey[900],
+            body: const Center(child: Items())));
   }
 
   void toHome(context) {
-    Future delays = Future.delayed(const Duration(seconds: 3), () {
+    Future delays = Future.delayed(const Duration(seconds: 2), () {
       return true;
     });
 

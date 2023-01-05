@@ -12,14 +12,12 @@ class ItemsMenu  extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-        padding: const EdgeInsets.all(12),
-        // margin: EdgeInsets.only(top: 0, bottom: 0),
+        color: Colors.black26,
+        padding: const EdgeInsets.all(10),
         alignment: Alignment.center,
-        width: 108,
-        height: 80,
-        decoration: const BoxDecoration( color: Color.fromRGBO(20, 20, 20, .3),
-            ),
+        height:105,
         child: FloatingActionButton(
+          backgroundColor: Colors.transparent,
             onPressed: () {},
             child: Column(children: [
               Separated(0, 13),

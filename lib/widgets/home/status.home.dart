@@ -83,7 +83,7 @@ class StatusHomeState extends State<StatusHome> {
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 color: Colors.green[800],
-                borderRadius: BorderRadius.circular(8)),
+                borderRadius: BorderRadius.circular(10)),
             child: const Text(
               "RUN SMART SCAN",
               style: TextStyle(
@@ -105,7 +105,7 @@ class StatusHomeState extends State<StatusHome> {
 
   void sizesScreen(context) {
     setState(() {
-      widthScreen = MediaQuery.of(context).size.width - 79;
+      widthScreen = MediaQuery.of(context).size.width -85;
       heightScreen = MediaQuery.of(context).size.height;
     });
   }
@@ -120,29 +120,26 @@ class AppsHome extends StatelessWidget {
   Widget build(context) {
     return Container(
         width: double.infinity,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  app("Battery Saver", Icons.battery_charging_full),
-                  app("Anti Track", Icons.pattern),
-                  app("Perfomance", Icons.speed),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  app("Secure vpn", Icons.vpn_key),
-                  app("\t\t\t\t\t\t\tSecure \tBrowser", Icons.vpn_lock),
-                  app("\tInternet security", Icons.wifi_lock),
-                ],
-              )
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(child: app("Battery Saver", Icons.battery_charging_full)),
+                Expanded(child: app("Anti Track", Icons.pattern)),
+                Expanded(child: app("Performance", Icons.speed)),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(child: app("Secure vpn", Icons.vpn_key)),
+                Expanded(child: app("Secure Browser", Icons.vpn_lock)),
+                Expanded(child: app("Internet security", Icons.wifi_lock)),
+              ],
+            )
+          ],
         ));
     // decoration: BoxDecoration(color: Colors.grey[200]));
   }
@@ -153,21 +150,21 @@ class AppsHome extends StatelessWidget {
         // from: 2.5,
         // duration: const Duration(seconds: 2),
         child: Container(
-            width: 180,
-            height: 70,
-            margin: const EdgeInsets.all(6),
-            padding: const EdgeInsets.all(5),
+           // width: 180,
+            height: 90,
+            margin: const EdgeInsets.all(5),
+           // padding: const EdgeInsets.all(1),
             decoration: BoxDecoration(
                 color: Colors.grey[900],
                 borderRadius: BorderRadius.circular(10)),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                        Icon(icon, size: 35, color: Colors.white),
+                        Icon(icon, size: 20, color: Colors.white),
                         Separated(0, 4),
-                       Text(title,
+                       Text(title,textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontFamily: "ubuntu", color: Colors.white, fontSize: 16,
+                  fontFamily: "ubuntu", color: Colors.white, fontSize: 14,
                 ),
               )
             ])));

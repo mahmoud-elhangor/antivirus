@@ -8,7 +8,8 @@ class Items extends StatelessWidget {
   Widget build(context) {
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [logoApp(40, 120), loadingCircular()]);
+        children: [logoApp(20, 150),
+          loadingCircular()]);
   }
 
   Widget loadingCircular() {

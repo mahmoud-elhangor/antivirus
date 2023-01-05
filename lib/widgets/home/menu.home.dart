@@ -11,20 +11,18 @@ class MenuHomeState extends State<MenuHome> {
   @override
   Widget build(context) {
     return Container(
-        width: 79,
+        width: 80,
         decoration: decorate(),
         child: ListView(
-          shrinkWrap: true,
-          physics: const ScrollPhysics(),
           children: insertItems (),
-        ));
+        ),
+    );
   }
 
   BoxDecoration decorate() {
     return const BoxDecoration(
-        borderRadius: BorderRadius.only(
-            topRight: Radius.circular(5), bottomRight: Radius.circular(5)),
-        color: Color.fromRGBO(20, 20, 20, .7));
+        borderRadius: BorderRadius.all(Radius.circular(1)),
+       color: Color.fromRGBO(20, 20, 20, .7));
   }
 
   dynamic insertItems() {
